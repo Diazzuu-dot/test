@@ -1,23 +1,22 @@
-/* --- Global & Variabel CSS (Terinspirasi Hotjar) --- */
+
 :root {
-    --color-primary: #FF5E5E;  /* Merah cerah ala Hotjar */
-    --color-secondary: #ffc971; /* Aksen kuning/oranye lembut */
-    --color-background: #f7f9fc; /* Abu-abu kebiruan yang sangat muda, bersih */
+    --color-primary: #FF5E5E;  
+    --color-secondary: #ffc971; 
+    --color-background: #f7f9fc; 
     --color-card: #ffffff;
-    --color-text: #2c3e50;     /* Biru tua untuk teks utama */
-    --color-text-light: #7f8c8d; /* Abu-abu terang untuk teks sekunder */
+    --color-text: #2c3e50;  
+    --color-text-light: #7f8c8d;
     --color-border: #e2e8f0;
-    --border-radius-main: 16px; /* Lebih besar, modern */
+    --border-radius-main: 16px; 
     --border-radius-inner: 10px;
-    --font-heading: 'Poppins', sans-serif; /* Font modern untuk judul */
-    --font-body: 'Inter', sans-serif;      /* Font bersih untuk body */
+    --font-heading: 'Poppins', sans-serif; 
+    --font-body: 'Inter', sans-serif;      
 }
 
-/* Import Google Fonts - Tambahkan ini di bagian paling atas file CSS Anda! */
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700&display=swap');
 
 
-/* Reset dasar dan font casual */
 * {
     margin: 0;
     padding: 0;
@@ -28,27 +27,26 @@ body {
     font-family: var(--font-body);
     background-color: var(--color-background);
     color: var(--color-text);
-    line-height: 1.7; /* Sedikit lebih lebar untuk keterbacaan */
+    line-height: 1.7; 
     
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-/* --- Header & Navbar --- */
 header {
     text-align: center;
-    padding: 3rem 1rem 1.5rem 1rem; /* Padding lebih besar */
+    padding: 3rem 1rem 1.5rem 1rem; 
     background-color: var(--color-card);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.04); /* Bayangan lebih halus */
-    margin-bottom: 2rem; /* Jarak dari main content */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.04); 
+    margin-bottom: 2rem; 
 }
 
 header h1 {
     font-family: var(--font-heading);
     color: var(--color-primary);
     margin-bottom: 0.75rem;
-    font-size: 2.5rem; /* Ukuran font lebih besar */
+    font-size: 2.5rem; 
     line-height: 1.2;
 }
 
@@ -56,14 +54,14 @@ header p {
     font-size: 1.2rem;
     color: var(--color-text-light);
     max-width: 700px;
-    margin: 0 auto 2rem auto; /* Pusatkan paragraf */
+    margin: 0 auto 2rem auto; 
 }
 
 header nav {
-    background-color: var(--color-primary); /* Navbar dengan warna utama */
+    background-color: var(--color-primary); 
     border-radius: var(--border-radius-inner);
-    max-width: fit-content; /* Sesuai konten */
-    margin: 0 auto; /* Pusatkan navbar */
+    max-width: fit-content; 
+    margin: 0 auto; 
     overflow: hidden; 
 }
 
@@ -75,13 +73,13 @@ header nav ul {
 }
 
 header nav li {
-    flex-shrink: 0; /* Jangan menyusut */
-    position: relative; /* [BARU] Diperlukan untuk sub menu */
+    flex-shrink: 0; 
+    position: relative; 
 }
 
 header nav a {
     display: block;
-    padding: 1rem 1.5rem; /* Padding lebih besar untuk tombol navigasi */
+    padding: 1rem 1.5rem; 
     text-decoration: none;
     color: #ffffff;
     font-weight: 600;
@@ -90,64 +88,62 @@ header nav a {
 }
 
 header nav a:hover,
-header nav a.active { /* Tambahkan kelas active untuk halaman yang sedang dibuka */
+header nav a.active { 
     background-color: rgba(255, 255, 255, 0.2);
     box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
 }
 
-/* --- [BARU] Styling Sub Menu Dropdown --- */
+
 .dropdown-menu {
-    display: none; /* Sembunyikan dropdown secara default */
+    display: none; 
     position: absolute;
     left: 0;
-    top: 100%; /* Muncul tepat di bawah menu utama */
+    top: 100%; 
     background-color: var(--color-card);
     border-radius: 0 0 var(--border-radius-inner) var(--border-radius-inner);
     box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-    min-width: 200px; /* Lebar minimum dropdown */
+    min-width: 200px; 
     z-index: 10;
-    flex-direction: column; /* [BARU] Ubah flex-direction jadi column */
-    overflow: hidden; /* [BARU] Pastikan border-radius-nya rapi */
+    flex-direction: column; 
+    overflow: hidden; 
 }
 
 .dropdown-menu li {
-    width: 100%; /* Pastikan item dropdown memenuhi lebar */
+    width: 100%; 
 }
 
 .dropdown-menu a {
-    color: var(--color-text); /* Ubah warna teks dropdown */
+    color: var(--color-text); 
     padding: 0.8rem 1.2rem;
     font-size: 1rem;
     font-weight: 500;
 }
 
 .dropdown-menu a:hover {
-    background-color: var(--color-background); /* Efek hover untuk item dropdown */
+    background-color: var(--color-background); 
     color: var(--color-primary);
 }
 
-/* Tampilkan dropdown saat parent-nya di-hover */
 .has-dropdown:hover > .dropdown-menu {
-    display: flex; /* [BARU] Ubah jadi flex agar konsisten */
+    display: flex; 
 }
 
 
-/* --- Konten Utama & Kartu Form --- */
 main {
     display: grid;
     place-items: center;
     padding: 2rem 1rem;
     flex-grow: 1; 
-    gap: 2.5rem; /* Jarak antar section di main */
+    gap: 2.5rem; 
 }
 
 main section {
     background-color: var(--color-card);
     border-radius: var(--border-radius-main);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* Bayangan lebih dramatis */
-    padding: 3rem; /* Padding lebih besar */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08); 
+    padding: 3rem; 
     width: 100%;
-    max-width: 960px; /* Lebar maksimum umum untuk konten */
+    max-width: 960px; 
     margin-top: 0; 
     display: flex;
     flex-direction: column;
@@ -177,7 +173,6 @@ main section h2::after {
 }
 
 
-/* --- Styling Elemen Form (Formulir Voting) --- */
 #formulir-voting form {
     width: 100%;
     max-width: 500px;
@@ -245,7 +240,6 @@ input[type="radio"] + label {
     cursor: pointer;
 }
 
-/* --- Tombol Submit --- */
 input[type="submit"] {
     width: 100%;
     padding: 1.1rem 1rem;
@@ -265,10 +259,9 @@ input[type="submit"]:hover {
     transform: translateY(-2px);
 }
 
-/* --- Styling Section 2 (Daftar Film) - Menerapkan GRID --- */
 .film-grid-container {
     display: grid;
-    /* [MODIFIKASI] Grid dibuat lebih padat untuk 20 film */
+   
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 2rem;
     width: 100%;
@@ -290,28 +283,28 @@ input[type="submit"]:hover {
 
 .film-card img {
     width: 100%;
-    height: 270px; /* [MODIFIKASI] Ukuran disesuaikan */
+    height: 270px; 
     object-fit: cover;
     display: block;
     border-bottom: 1px solid var(--color-border);
-    background-color: #eee; /* Warna background untuk placeholder */
+    background-color: #eee; 
 }
 
 .film-card h3 {
     font-family: var(--font-heading);
     margin: 1.2rem 1rem 0.5rem 1rem;
     color: var(--color-text);
-    font-size: 1.15rem; /* [MODIFIKASI] Sedikit lebih kecil agar muat */
+    font-size: 1.15rem; 
 }
 
 .film-card p {
-    font-size: 0.9rem; /* [MODIFIKASI] Sedikit lebih kecil */
+    font-size: 0.9rem; 
     color: var(--color-text-light);
     margin-bottom: 1.2rem;
 }
 
 
-/* --- Styling Section 3 (Hasil Polling) - Menerapkan FLEXBOX --- */
+
 .polling-flex-container {
     display: flex;
     flex-direction: column;
@@ -353,7 +346,6 @@ input[type="submit"]:hover {
     transition: width 0.8s ease-out;
 }
 
-/* --- Footer --- */
 footer {
     text-align: center;
     padding: 2.5rem 1rem;
@@ -364,7 +356,7 @@ footer {
     border-top: 1px solid var(--color-border);
 }
 
-/* --- RESPONSIVE --- */
+
 @media (max-width: 768px) {
     header h1 {
         font-size: 2rem;
@@ -379,7 +371,7 @@ footer {
         padding: 2rem;
     }
     .film-grid-container {
-        /* [MODIFIKASI] 3 kolom di tablet */
+       
         grid-template-columns: repeat(3, 1fr);
         gap: 1.5rem;
     }
@@ -399,21 +391,21 @@ footer {
         font-size: 1.8rem;
     }
     header nav ul {
-        flex-wrap: wrap; /* Navbar wrap di mobile yang sangat kecil */
+        flex-wrap: wrap; 
     }
     header nav a {
         padding: 0.8rem 1rem;
         font-size: 1rem;
     }
-    /* [BARU] Perbaikan Sub Menu di Mobile */
+    
     .has-dropdown:hover > .dropdown-menu {
-        position: static; /* Lepas dari 'absolute' di mobile */
+        position: static; 
         width: 100%;
         box-shadow: none;
         border-radius: 0;
     }
     .dropdown-menu a {
-        background-color: #e64c4c; /* Warna sedikit beda */
+        background-color: #e64c4c; 
         color: white;
     }
     
