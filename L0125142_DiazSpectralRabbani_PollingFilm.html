@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting Film Favorit 2025</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+    <header>
+        <h1>Polling Film Favorit 2025</h1>
+        <p>Ayo ikut serta dalam polling untuk menentukan film terfavorit tahun ini!</p>
+        
+        <nav>
+            <ul>
+                <li><a href="#formulir-voting" class="active">Vote Sekarang</a></li>
+                <li><a href="#daftar-film">Daftar Film</a></li>
+                
+                <li class="has-dropdown">
+                    <a href="#">Genre</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Sci-Fi</a></li>
+                        <li><a href="#">Horor</a></li>
+                        <li><a href="#">Musical</a></li>
+                        <li><a href="#">Animasi</a></li>
+                    </ul>
+                </li>
+                
+                <li><a href="#hasil-polling">Lihat Hasil</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="formulir-voting">
+            <h2>Isi Pilihanmu di Sini</h2>
+            
+            <form action="#" method="post">
+                <p>
+                    <label for="nama_lengkap">Nama Kamu:</label><br>
+                    <input type="text" id="nama_lengkap" name="nama_pengguna" required>
+                </p>
+
+                <p>
+                    <label>Pilih Genre Film Favoritmu:</label><br>
+                    <div class="radio-group">
+                        <input type="radio" id="genre_aksi" name="genre" value="Aksi">
+                        <label for="genre_aksi">Aksi</label>
+                        <input type="radio" id="genre_komedi" name="genre" value="Komedi">
+                        <label for="genre_komedi">Komedi</label>
+                        <input type="radio" id="genre_horor" name="genre" value="Horor">
+                        <label for="genre_horor">Horor</label>
+                    </div>
+                </p>
+
+                <p>
+                    <label for="film_pilihan">Mana film terbaik 2025?</label><br>
+                    <select id="film_pilihan" name="film_terbaik">
+                        <option value="gladiator_2">Gladiator 2</option>
+                        <option value="wicked">Wicked</option>
+                        <option value="moana_2">Moana 2</option>
+                        <option value="mufasa">Mufasa: The Lion King</option>
+                        <option value="sonic_3">Sonic the Hedgehog 3</option>
+                        <option value="venom_3">Venom: The Last Dance</option>
+                        <option value="captain_america_4">Captain America: Brave New World</option>
+                        <option value="thunderbolts">Thunderbolts</option>
+                        <option value="fantastic_four">Fantastic Four</option>
+                        <option value="superman">Superman</option>
+                        <option value="beetlejuice_2">Beetlejuice Beetlejuice</option>
+                        <option value="joker_2">Joker: Folie à Deux</option>
+                        <option value="kraven">Kraven the Hunter</option>
+                        <option value="lotr_war">Lord of the Rings: War of the Rohirrim</option>
+                        <option value="smile_2">Smile 2</option>
+                        <option value="terrifier_3">Terrifier 3</min>
+                        <option value="wolf_man">Wolf Man</option>
+                        <option value="nosferatu">Nosferatu</option>
+                        <option value="ballerina">Ballerina</option>
+                        <option value="the_room_next_door">The Room Next Door</option>
+                    </select>
+                </p>
+
+                <p>
+                    <input type="submit" value="Kirim Jawaban">
+                </p>
+            </form>
+        </section>
+
+
+        <section id="daftar-film" class="card-layout">
+            <h2>Kandidat Film Terbaik 2025</h2>
+            <div class="film-grid-container">
+                
+                <div class="film-card">
+                    <img src="gladiator.jpeg" alt="Poster Gladiator 2">
+                    <h3>Gladiator 2</h3>
+                    <p>Genre: Action, Drama</p>
+                </div>
+                
+                <div class="film-card">
+                    <img src="wicked.jpeg" alt="Poster Wicked">
+                    <h3>Wicked</h3>
+                    <p>Genre: Musical, Fantasi</p>
+                </div>
+
+                <div class="film-card">
+                    <img src="moana.jpeg" alt="Poster Moana 2">
+                    <h3>Moana 2</h3>
+                    <p>Genre: Animasi, Petualangan</p>
+                </div>
+
+                <div class="film-card">
+                    <img src="mufasa.jpeg" alt="Poster Mufasa">
+                    <h3>Mufasa: The Lion King</h3>
+                    <p>Genre: Animasi, Drama</p>
+                </div>
+
+                <div class="film-card">
+                    <img src="https://via.placeholder.com/300x450/000000/FFFFFF?text=Sonic+3" alt="Poster Sonic 3">
+                    <h3>Sonic the Hedgehog 3</h3>
+                    <p>Genre: Action, Komedi</p>
+                </div>
+
+                <div class="film-card">
+                    <img src="https://via.placeholder.com/300x450/000000/FFFFFF?text=Venom+3" alt="Poster Venom 3">
+                    <h3>Venom: The Last Dance</h3>
+                    <p>Genre: Action, Sci-Fi</p>
+                </div>
+
+                <div class="film-card">
+                    <img src="https://via.placeholder.com/300x450/000000/FFFFFF?text=Captain+America+4" alt="Poster Captain America 4">
+                    <h3>Captain America: BNW</h3>
+                    <p>Genre: Action, Sci-Fi</p>
+                </div>
+
+                <div class="film-card">
+                    <img src="https://via.placeholder.com/300x450/000000/FFFFFF?text=Thunderbolts" alt="Poster Thunderbolts">
+                    <h3>Thunderbolts</h3>
+                    <p>Genre: Action, Petualangan</p>
+                </div>
+
+                <div class="film-card">
+                    <img src="https://via.placeholder.com/300x450/000000/FFFFFF?text=Fantastic+Four" alt="Poster Fantastic Four">
+                    <h3>Fantastic Four</h3>
+                    <p>Genre: Action, Sci-Fi</p>
+                </div>
+
+                <div class="film-card">
+                    <img src="https://via.placeholder.com/300x450/000000/FFFFFF?text=Superman" alt="Poster Superman">
+                    <h3>Superman</h3>
+                    <p>Genre: Action, Sci-Fi</p>
+                </div>
+
+                <div class="film-card">
+                    <img src="https://via.placeholder.com/300x450/000000/FFFFFF?text=Beetlejuice+2" alt="Poster Beetlejuice 2">
+                    <h3>Beetlejuice Beetlejuice</h3>
+                    <p>Genre: Komedi, Fantasi</p>
+                </div>
+
+                <div class="film-card">
+                    <img src="https://via.placeholder.com/300x450/000000/FFFFFF?text=Joker+2" alt="Poster Joker 2">
+                    <h3>Joker: Folie à Deux</h3>
+                    <p>Genre: Musical, Thriller</p>
+                </div>
+
+                <div class="film-card">
+                    <img src="https://via.placeholder.com/300x450/000000/FFFFFF?text=Kraven" alt="Poster Kraven">
+                    <h3>Kraven the Hunter</h3>
+                    <p>Genre: Action, Thriller</p>
+                </div>
+
+                <div class="film-card">
+                    <img src="https://via.placeholder.com/300x450/000000/FFFFFF?text=LOTR+War" alt="Poster LOTR War">
+                    <h3>LOTR: War of the Rohirrim</h3>
+                    <p>Genre: Animasi, Fantasi</p>
+                </div>
+
+                <div class="film-card">
+                    <img src="https://via.placeholder.com/300x450/000000/FFFFFF?text=Smile+2" alt="Poster Smile 2">
+                    <h3>Smile 2</h3>
+                    <p>Genre: Horor</p>
+                </div>
+
+                <div class="film-card">
+                    <img src="https://via.placeholder.com/300x450/000000/FFFFFF?text=Terrifier+3" alt="Poster Terrifier 3">
+                    <h3>Terrifier 3</h3>
+                    <p>Genre: Horor</p>
+                </div>
+
+                <div class="film-card">
+                    <img src="https://via.placeholder.com/300x450/000000/FFFFFF?text=Wolf+Man" alt="Poster Wolf Man">
+                    <h3>Wolf Man</h3>
+                    <p>Genre: Horor, Thriller</p>
+                </div>
+
+                <div class="film-card">
+                    <img src="https://via.placeholder.com/300x450/000000/FFFFFF?text=Nosferatu" alt="Poster Nosferatu">
+                    <h3>Nosferatu</h3>
+                    <p>Genre: Horor, Fantasi</p>
+                </div>
+
+                <div class="film-card">
+                    <img src="https://via.placeholder.com/300x450/000000/FFFFFF?text=Ballerina" alt="Poster Ballerina">
+                    <h3>Ballerina</h3>
+                    <p>Genre: Action, Thriller</p>
+                </div>
+
+                <div class="film-card">
+                    <img src="https://via.placeholder.com/300x450/000000/FFFFFF?text=The+Room+Next+Door" alt="Poster The Room Next Door">
+                    <h3>The Room Next Door</h3>
+                    <p>Genre: Drama</p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section id="hasil-polling" class="card-layout">
+            <h2>Hasil Polling Sementara</h2>
+            <div class="polling-flex-container">
+                <div class="poll-item">
+                    <span>Gladiator 2</span>
+                    <div class="poll-bar" style="width: 30%;">30%</div>
+                </div>
+                <div class="poll-item">
+                    <span>Wicked</span>
+                    <div class="poll-bar" style="width: 25%;">25%</div>
+                </div>
+                <div class="poll-item">
+                    <span>Moana 2</span>
+                    <div class="poll-bar" style="width: 20%;">20%</div>
+                </div>
+                <div class="poll-item">
+                    <span>Lainnya</span>
+                    <div class="poll-bar" style="width: 25%;">25%</div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Diaz Spectral Rabbani. Hak Cipta Dilindungi.</p>
+    </footer>
+
+</body>
+</html>
